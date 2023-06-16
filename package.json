@@ -7,13 +7,14 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "lagon:dev": "NITRO_PRESET=lagon pnpm build && npx -p esbuild -p @lagon/cli lagon dev",
-    "lagon:deploy": "NITRO_PRESET=lagon pnpm build && npx -p esbuild -p @lagon/cli lagon deploy"
+    "lagon:dev": "NITRO_PRESET=lagon NUXT_IMAGE_PROVIDER=twicpics pnpm build && npx -p esbuild -p @lagon/cli lagon dev",
+    "lagon:deploy": "NITRO_PRESET=lagon NUXT_IMAGE_PROVIDER=twicpics pnpm build && npx -p esbuild -p @lagon/cli lagon deploy"
   },
   "devDependencies": {
     "@iconify-json/mdi": "^1.1.52",
     "@nuxt/content": "^2.7.0",
     "@nuxt/devtools": "latest",
+    "@nuxt/image": "1.0.0-rc.1",
     "@types/node": "^18",
     "@unocss/nuxt": "^0.53.1",
     "nuxt": "^3.5.2",

@@ -2,6 +2,7 @@
 export default defineNuxtConfig({
   modules: [
     '@nuxt/content',
+    '@nuxt/image',
     '@unocss/nuxt'
   ],
   content: {
@@ -16,6 +17,13 @@ export default defineNuxtConfig({
           target: '_blank'
         }
       }
+    }
+  },
+  image: {
+    provider: 'twicpics',
+    format: 'webp',
+    twicpics: {
+      baseURL: 'https://vernaillen.twic.pics/concept'
     }
   },
   unocss: {
@@ -97,6 +105,9 @@ export default defineNuxtConfig({
                       -ms-user-select: none; /* Internet Explorer/Edge */
                           user-select: none; /* Non-prefixed version, currently
                                                 supported by Chrome and Opera */
+                }
+                .prose {
+                  max-width: 90% !important;
                 }
                 .prose a {
                   color: #755d0f;
