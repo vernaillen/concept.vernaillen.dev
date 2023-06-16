@@ -2,7 +2,7 @@
     <div class="w-full h-16 container mx-auto px-6 pt-0">
         <div class="flex">
             <div class="w-[180px]">
-                <NuxtLink to="/" class="mx-auto">
+                <NuxtLink to="/" class="mx-auto" aria-label="go to Home">
                     <svg 
                         viewBox="0 0 754 276" 
                         width="100"
