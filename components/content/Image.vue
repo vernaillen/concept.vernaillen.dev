@@ -15,6 +15,8 @@ const wrapperClass = computed(() => {
     <div :class="wrapperClass">
         <NuxtImg 
             format="webp" 
+            fit="cover"
+            class="object-cover"
             :alt="alt"
             :src="src" 
             :width="2 * width" 

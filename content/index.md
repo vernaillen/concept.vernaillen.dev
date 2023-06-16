@@ -13,8 +13,8 @@ title: Home
 ::Image
 ---
 src: '/images/pagespeed-web-dev.png'
-width: 450
-height: 232
+width: 225
+height: 116
 alt: 'pagespeed results'
 ---
 ::
