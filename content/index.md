@@ -4,11 +4,12 @@ title: Home
 
 ## Goals:
 
-* Build a markdown driven website with Nuxt 3 and Nuxt Content 2
-* Should run as Edge Functions (Vervel Edge and/or Lagon)
+* Build a markdown driven website with [Nuxt 3](https://nuxt.com) and [Nuxt Content](https://content.nuxtjs.org/)
+* Should run as Edge Functions ([Vercel Edge](https://vercel.com/features/edge-functions) and/or [Lagon](https://lagon.app)
 * As lightweight and fast as possible
 * Lighthouse Scores of 100% in all categories
 * Find out what functionality & modules can be added without compromising performance
+* Content should be easy to maintain with [Nuxt.Studio](https://nuxt.studio)
 
 ## Decisions so far:
 
