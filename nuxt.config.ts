@@ -27,14 +27,39 @@ export default defineNuxtConfig({
       provider: 'google',
       extendTheme: true,
       fonts: {
-        sans: ['Inter:200,300,400,500,700,800,900'],
-        mono: ['Fira Code', 'Fira Mono:400,700'],
+        sans: ['Inter:200,300,400,500,700,800,900']
       },
     },
     theme: {
       colors: {
-        'primary': '#333333',
-        'vernaillen': '#9C8E1B'
+        'primary': {
+          DEFAULT: '#333333',
+          '50': '#f5f5f5',
+          '100': '#ebebeb',
+          '200': '#cccccc',
+          '300': '#adadad',
+          '400': '#707070',
+          '500': '#333333',
+          '600': '#2e2929',
+          '700': '#261d1d',
+          '800': '#1f1212',
+          '900': '#170a0a',
+          '950': '#0f0404'
+        },
+        'vernaillen': {
+          DEFAULT: '#9C8E1B',
+          '50': '#faf9f0',
+          '100': '#f5f3e1',
+          '200': '#e6e2b5',
+          '300': '#d6d090',
+          '400': '#baaf4e',
+          '500': '#9c8e1b',
+          '600': '#8c7815',
+          '700': '#755d0f',
+          '800': '#5e4509',
+          '900': '#452e06',
+          '950': '#2e1b02'
+        }
       },
     },
     shortcuts: [
@@ -72,6 +97,16 @@ export default defineNuxtConfig({
                       -ms-user-select: none; /* Internet Explorer/Edge */
                           user-select: none; /* Non-prefixed version, currently
                                                 supported by Chrome and Opera */
+                }
+                .prose a {
+                  color: #755d0f;
+                  text-decoration: none;
+                  border-bottom: 1px dotted rgba(200, 200, 200, 0.5);
+                  transition: border .2s ease-in-out;
+                }
+                .prose a:hover {
+                  border-bottom: 1px solid ${theme.colors?.vernaillen.DEFAULT};
+                  border-color: ${theme.colors?.vernaillen.DEFAULT};
                 }
               `
       }
