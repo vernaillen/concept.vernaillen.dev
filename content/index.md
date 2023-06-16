@@ -15,6 +15,7 @@ title: Home
 src: '/images/pagespeed-web-dev.png'
 width: 450
 height: 232
+alt: 'pagespeed results'
 ---
 ::
 
