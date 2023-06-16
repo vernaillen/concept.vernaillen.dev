@@ -65,7 +65,6 @@ export default defineNuxtConfig({
                   padding: 0;
                   margin: 0;
                   font-family: ${theme.fontFamily?.sans};
-                  background-color: #eceaea;
                   -webkit-touch-callout: none; /* iOS Safari */
                   -webkit-user-select: none; /* Safari */
                    -khtml-user-select: none; /* Konqueror HTML */
