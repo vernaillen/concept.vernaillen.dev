@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { lazyLoad } from 'unlazy'
 useHead({
   titleTemplate: (title?: string) => `${title} - Wouter Vernaillen: Freelance Full Stack Java, Vue & Nuxt Developer`,
   htmlAttrs: {

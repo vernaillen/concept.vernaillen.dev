@@ -22,6 +22,7 @@ onMounted(() => {
             .to(boxes[2], { y: -166 })
             .reverse();
     }, main.value); // <- Scope!
+    tl.value.reversed(!tl.value.reversed());
     toggleTimeline()
 });
 
