@@ -12,6 +12,15 @@ useHead({
       rel: 'icon',
       href: '/favicon.svg',
       type: 'image/svg+xml'
+    },
+    {
+      href: 'https://fonts.googleapis.com',
+      rel: 'preconnect'
+    },
+    {
+      href: 'https://fonts.gstatic.com',
+      rel: 'preconnect',
+      crossorigin: ''
     }
   ]
 })

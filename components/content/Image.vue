@@ -17,6 +17,8 @@ const wrapperClass = computed(() => {
             format="webp" 
             fit="cover"
             class="object-cover"
+            preload
+            loading="lazy"
             :alt="alt"
             :src="src" 
             :width="2 * width" 
