@@ -18,6 +18,8 @@ const wrapperClass = computed(() => {
         <img 
             :src="imgUrl" 
             :alt="alt"
+            :width="width"
+            :height="height"
             class="object-cover rounded" />
     </div>
 </template> 
