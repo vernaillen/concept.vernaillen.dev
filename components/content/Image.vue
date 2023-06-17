@@ -7,7 +7,7 @@ export interface Props {
     height: number
 }
 const props = defineProps<Props>()
-const imgUrl = img(props.src, { width: 2 * props.width, height: 2 * props.height, fit: 'cover' })
+const imgUrl = img(props.src, { width: props.width, height: props.height, fit: 'cover', preload: true })
 const wrapperClass = computed(() => {
     return 'w-[' + props.width + 'px] h-[' + props.height + 'px]'
 })
