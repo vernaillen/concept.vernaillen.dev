@@ -4,6 +4,7 @@ export default defineNuxtConfig({
     '@nuxt/content',
     '@nuxt/image',
     '@unocss/nuxt',
+    'nuxt-lazy-load',
     'nuxt-multi-cache'
   ],
 
@@ -28,6 +29,10 @@ export default defineNuxtConfig({
     twicpics: {
       baseURL: 'https://vernaillen.twic.pics/concept'
     }
+  },
+
+  lazyLoad: {
+    directiveOnly: false
   },
 
   unocss: {

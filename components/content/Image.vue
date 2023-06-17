@@ -1,4 +1,5 @@
 <script setup lang="ts">
+const img = useImage()
 export interface Props {
     src: string
     alt: string
@@ -6,6 +7,7 @@ export interface Props {
     height: number
 }
 const props = defineProps<Props>()
+const imgUrl = img(props.src, { width: 2 * props.width, height: 2 * props.height, fit: 'cover' })
 const wrapperClass = computed(() => {
     return 'w-[' + props.width + 'px] h-[' + props.height + 'px]'
 })
@@ -13,15 +15,9 @@ const wrapperClass = computed(() => {
 
 <template>
     <div :class="wrapperClass">
-        <NuxtImg 
-            format="webp" 
-            fit="cover"
-            class="object-cover"
-            preload
-            loading="lazy"
+        <img 
+            :src="imgUrl" 
             :alt="alt"
-            :src="src" 
-            :width="2 * width" 
-            :height="2 * height" />
+            class="object-cover rounded" />
     </div>
 </template> 
