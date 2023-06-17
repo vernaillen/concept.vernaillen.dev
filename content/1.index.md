@@ -19,8 +19,9 @@ alt: 'pagespeed results'
 ---
 ::
 
-## Decisions so far:
+## Findings so far:
 
-- Use UnoCss instead of TailwindCss
+- Decided to use UnoCss instead of TailwindCss, because the bundle size is much smaller
 - Use SVG instead of images whenever possibles
 - Avoid Nuxt Icon, adding it seems to push resource usage a lot on Lagon
+- After adding [nuxt-multi-cache](https://nuxt-multi-cache.dulnan.net/) to the app the First Contentful Paint time on Mobile went down from 2.1s to 1.3s, so that's definitely a keeper :)
