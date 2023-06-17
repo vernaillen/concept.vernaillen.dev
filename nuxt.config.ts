@@ -145,6 +145,10 @@ export default defineNuxtConfig({
     },
   },
 
+  build: {
+    transpile: ['gsap'],
+  },
+  
   devtools: { enabled: true },
   plugins: ['~/plugins/pageHooks.ts']
 })
