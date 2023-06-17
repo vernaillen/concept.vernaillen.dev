@@ -7,7 +7,7 @@ export interface Props {
     height: number
 }
 const props = defineProps<Props>()
-const imgUrl = img(props.src, { width: props.width, height: props.height, fit: 'cover', preload: true })
+const imgUrl = img(props.src, { width: props.width, height: props.height, fit: 'cover' })
 const wrapperClass = computed(() => {
     return 'w-[' + props.width + 'px] h-[' + props.height + 'px]'
 })
@@ -20,6 +20,7 @@ const wrapperClass = computed(() => {
             :alt="alt"
             :width="width"
             :height="height"
+            
             class="object-cover rounded" />
     </div>
 </template> 
