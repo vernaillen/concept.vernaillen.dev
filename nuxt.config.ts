@@ -3,8 +3,10 @@ export default defineNuxtConfig({
   modules: [
     '@nuxt/content',
     '@nuxt/image',
-    '@unocss/nuxt'
+    '@unocss/nuxt',
+    'nuxt-multi-cache'
   ],
+
   content: {
     documentDriven: true,
     markdown: {
@@ -19,6 +21,7 @@ export default defineNuxtConfig({
       }
     }
   },
+
   image: {
     provider: 'twicpics',
     format: 'webp',
@@ -26,6 +29,7 @@ export default defineNuxtConfig({
       baseURL: 'https://vernaillen.twic.pics/concept'
     }
   },
+
   unocss: {
     attributify: true,
     icons: true,
@@ -123,5 +127,24 @@ export default defineNuxtConfig({
       }
     ],
   },
-  devtools: { enabled: true }
+
+  multiCache: {
+    component: {
+      enabled: true,
+    },
+    route: {
+      enabled: true,
+    },
+    data: {
+      enabled: true,
+    },
+    api: {
+      enabled: true,
+      cacheTagInvalidationDelay: 5000,
+      authorization: false,
+    },
+  },
+
+  devtools: { enabled: true },
+  plugins: ['~/plugins/pageHooks.ts']
 })

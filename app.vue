@@ -18,7 +18,14 @@ useHead({
 </script>
 
 <template>
+  <NuxtLoadingIndicator color="repeating-linear-gradient(to right,rgb(156 142 27/40%) 0%,rgb(156 142 27/60%) 80%,rgb(156 142 27/40%) 100%)" />
   <div>
     <NuxtPage />
   </div>
 </template>
+
+<style>
+.nuxt-loading-indicator {
+  opacity: 100% !important;
+}
+</style>
