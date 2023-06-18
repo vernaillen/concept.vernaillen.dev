@@ -1,44 +1,43 @@
 <script setup>
-import gsap from 'gsap';
+import gsap from 'gsap'
 
-const main = ref(),
-    tl = ref(),
-    ctx = ref();
+const main = ref()
+const tl = ref()
+const ctx = ref()
 
 const toggleTimeline = () => {
-    setTimeout(() => {
-        tl.value.reversed(!tl.value.reversed());
-        toggleTimeline()
-    }, 2000)
-};
+  setTimeout(() => {
+    tl.value.reversed(!tl.value.reversed())
+    toggleTimeline()
+  }, 2000)
+}
 
 onMounted(() => {
-    ctx.value = gsap.context((self) => {
-        const boxes = self.selector('.box');
-        tl.value = gsap
-            .timeline()
-            .to(boxes[0], { x: 120, rotation: 360 })
-            .to(boxes[1], { x: -120, rotation: -360 }, '<')
-            .to(boxes[2], { y: -166 })
-            .reverse();
-    }, main.value); // <- Scope!
-    tl.value.reversed(!tl.value.reversed());
-    toggleTimeline()
-});
+  ctx.value = gsap.context((self) => {
+    const boxes = self.selector('.box')
+    tl.value = gsap
+      .timeline()
+      .to(boxes[0], { x: 120, rotation: 360 })
+      .to(boxes[1], { x: -120, rotation: -360 }, '<')
+      .to(boxes[2], { y: -166 })
+      .reverse()
+  }, main.value) // <- Scope!
+  tl.value.reversed(!tl.value.reversed())
+  toggleTimeline()
+})
 
 onUnmounted(() => {
-    ctx.value.revert(); // <- Easy Cleanup!
-});
+  ctx.value.revert() // <- Easy Cleanup!
+})
 </script>
 
 <template>
-    <section class="boxes-container" ref="main">
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-    </section>
+  <section ref="main" class="boxes-container">
+    <div class="box" />
+    <div class="box" />
+    <div class="box" />
+  </section>
 </template>
-
 
 <style>
 :root {

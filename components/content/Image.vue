@@ -9,26 +9,22 @@ export interface Props {
 const props = defineProps<Props>()
 const imgUrl = img(props.src, { width: props.width, height: props.height, fit: 'cover' })
 const wrapperClass = computed(() => {
-    return 'w-[' + props.width + 'px] h-[' + props.height + 'px]'
+  return 'w-[' + props.width + 'px] h-[' + props.height + 'px]'
 })
-function visibilityChanged(isVisible: boolean, entry: IntersectionObserverEntry) {
-    console.log('visibilityChanged')
-    console.log(isVisible)
-    console.log(entry)
-}
 </script>
 
 <template>
-    <div :class="wrapperClass"> 
-        <img 
-            v-lazy="imgUrl"
-            src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" 
-            :alt="alt"
-            :width="width"
-            :height="height"
-            class="object-cover rounded opacity-0 transform transition-all duration-1000" />
-    </div>
-</template> 
+  <div :class="wrapperClass">
+    <img
+      v-lazy="imgUrl"
+      src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+      :alt="alt"
+      :width="width"
+      :height="height"
+      class="object-cover rounded opacity-0 transform transition-all duration-1000"
+    >
+  </div>
+</template>
 
 <style>
 img[lazy=loading] {

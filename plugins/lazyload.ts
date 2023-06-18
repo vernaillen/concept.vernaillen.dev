@@ -1,8 +1,8 @@
 import VueLazyLoad from 'vue3-lazyload'
 
 export default defineNuxtPlugin((nuxtApp) => {
-    nuxtApp.vueApp.use(VueLazyLoad, {
-        /*loading: '',
+  nuxtApp.vueApp.use(VueLazyLoad, {
+    /* loading: '',
         error: '',
         lifecycle: {
             loading: (el) => {
@@ -15,6 +15,6 @@ export default defineNuxtPlugin((nuxtApp) => {
             loaded: (el) => {
                 console.log('loaded', el)
             }
-        }*/
-    })
+        } */
+  })
 })

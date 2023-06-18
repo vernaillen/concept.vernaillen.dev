@@ -1,4 +1,3 @@
-
 <script setup lang="ts">
 useRouteCache((helper) => {
   helper.setCacheable().setMaxAge(9000)
@@ -8,7 +7,7 @@ useRouteCache((helper) => {
 <template>
   <div class="flex flex-col">
     <main class="flex-grow">
-      <RenderCacheable>
+      <RenderCacheable cache-key="header">
         <HeaderComponent />
       </RenderCacheable>
       <div class="w-full container mx-auto px-6 py-4">
@@ -17,7 +16,7 @@ useRouteCache((helper) => {
           <ContentDoc />
         </div>
       </div>
-      <RenderCacheable>
+      <RenderCacheable cache-key="footer">
         <FooterComponent />
       </RenderCacheable>
     </main>
