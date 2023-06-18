@@ -1,15 +1,16 @@
 <script setup lang="ts">
 const img = useImage()
 export interface Props {
-    src: string
-    alt: string
-    width: number
-    height: number
+  src: string
+  alt: string
+  width: number
+  height: number
+  imgClass?: string
 }
 const props = defineProps<Props>()
 const imgUrl = img(props.src, { width: props.width, height: props.height, fit: 'cover' })
 const wrapperClass = computed(() => {
-  return 'w-[' + props.width + 'px] h-[' + props.height + 'px]'
+  return 'w-[' + props.width + 'px] h-[' + props.height + 'px] max-w-full'
 })
 </script>
 
@@ -21,7 +22,8 @@ const wrapperClass = computed(() => {
       :alt="alt"
       :width="width"
       :height="height"
-      class="object-cover rounded opacity-0 transform transition-all duration-1000"
+      :class="imgClass"
+      class="object-cover mb-5 rounded opacity-0 transform transition-all duration-1000 max-w-full"
     >
   </div>
 </template>
