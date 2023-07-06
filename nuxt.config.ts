@@ -150,5 +150,16 @@ export default defineNuxtConfig({
   },
 
   devtools: { enabled: true },
+  debug: true,
+
+  vite: {
+    build: {
+      cssMinify: 'lightningcss'
+    },
+    css: {
+      transformer: 'lightningcss'
+    }
+  },
+
   plugins: ['~/plugins/lazyload.ts', '~/plugins/pageHooks.ts']
 })
