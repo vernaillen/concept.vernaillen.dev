@@ -21,7 +21,7 @@
     "@nuxthq/studio": "^0.13.4",
     "@nuxtjs/eslint-config-typescript": "^12.0.0",
     "@types/node": "^20.4.4",
-    "@unocss/nuxt": "^0.53.6",
+    "@unocss/nuxt": "^0.54.0",
     "@vueuse/nuxt": "^10.2.1",
     "eslint": "^8.45.0",
     "lightningcss": "^1.21.5",
