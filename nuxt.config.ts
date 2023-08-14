@@ -1,10 +1,14 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+
+  extends: [
+    '../nuxt-base-layer'
+  ],
+
   modules: [
     '@nuxt/content',
     '@nuxt/image',
-    '@unocss/nuxt',
-    'nuxt-multi-cache'
+    '@unocss/nuxt'
   ],
 
   content: {
@@ -126,23 +130,6 @@ export default defineNuxtConfig({
               `
       }
     ]
-  },
-
-  multiCache: {
-    component: {
-      enabled: true
-    },
-    route: {
-      enabled: true
-    },
-    data: {
-      enabled: true
-    },
-    api: {
-      enabled: true,
-      cacheTagInvalidationDelay: 5000,
-      authorization: false
-    }
   },
 
   build: {
