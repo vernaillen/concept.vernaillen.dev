@@ -2,7 +2,7 @@
 export default defineNuxtConfig({
 
   extends: [
-    '../nuxt-base-layer'
+    '@vernaillen/nuxt-base-layer'
   ],
 
   modules: [
