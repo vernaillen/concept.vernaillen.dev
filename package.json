@@ -29,9 +29,5 @@
   },
   "dependencies": {
     "gsap": "^3.12.2"
-  },
-  "engines": {
-    "node": ">=18",
-    "pnpm": ">=8"
   }
 }

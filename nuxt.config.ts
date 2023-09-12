@@ -137,7 +137,6 @@ export default defineNuxtConfig({
   },
 
   devtools: { enabled: true },
-  debug: true,
 
   vite: {
     build: {
