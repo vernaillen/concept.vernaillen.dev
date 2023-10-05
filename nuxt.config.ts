@@ -27,11 +27,7 @@ export default defineNuxtConfig({
   },
 
   image: {
-    provider: 'twicpics',
-    format: 'webp',
-    twicpics: {
-      baseURL: 'https://vernaillen.twic.pics/concept'
-    }
+    provider: 'vercel'
   },
 
   unocss: {
