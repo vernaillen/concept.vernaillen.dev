@@ -20,7 +20,7 @@
     "@nuxthq/studio": "^1.0.5",
     "@nuxtjs/eslint-config-typescript": "^12.1.0",
     "@types/node": "^20.9.4",
-    "@unocss/nuxt": "^0.57.7",
+    "@unocss/nuxt": "^0.58.0",
     "@vernaillen/nuxt-base-layer": "^0.2.21",
     "eslint": "^8.54.0",
     "lightningcss": "^1.22.1",
