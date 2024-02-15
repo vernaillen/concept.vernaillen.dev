@@ -141,7 +141,5 @@ export default defineNuxtConfig({
     css: {
       transformer: 'lightningcss'
     }
-  },
-
-  plugins: ['~/plugins/lazyload.ts', '~/plugins/pageHooks.ts']
+  }
 })
