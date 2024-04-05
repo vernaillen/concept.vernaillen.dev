@@ -20,7 +20,7 @@
     "@types/node": "^20.11.30",
     "@unocss/nuxt": "^0.58.7",
     "@vernaillen/nuxt-base-layer": "^0.3.4",
-    "eslint": "^8.57.0",
+    "eslint": "^9.0.0",
     "lightningcss": "^1.24.1",
     "nuxt": "^3.11.1",
     "remark-breaks": "^4.0.0"
