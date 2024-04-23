@@ -6,11 +6,16 @@ export default defineNuxtConfig({
   ],
 
   modules: [
+    '@hypernym/nuxt-anime',
     '@nuxt/content',
     '@nuxt/image',
     '@unocss/nuxt'
   ],
 
+  anime: {
+    composables: true
+  },
+  
   content: {
     documentDriven: true,
     markdown: {
