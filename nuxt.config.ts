@@ -1,6 +1,5 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-
   extends: [
     '@vernaillen/nuxt-base-layer'
   ],
@@ -15,7 +14,7 @@ export default defineNuxtConfig({
   anime: {
     composables: true
   },
-  
+
   content: {
     documentDriven: true,
     markdown: {
@@ -146,5 +145,10 @@ export default defineNuxtConfig({
     css: {
       transformer: 'lightningcss'
     }
-  }
+  },
+
+  future: {
+    compatibilityVersion: 4,
+  },
+  compatibilityDate: '2024-07-08'
 })
