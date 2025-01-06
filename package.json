@@ -30,9 +30,5 @@
   },
   "trustedDependencies": [
     "sharp"
-  ],
-  "packageManager": "pnpm@9.15.1",
-  "engines": {
-    "pnpm": "9.15.1"
-  }
+  ]
 }
