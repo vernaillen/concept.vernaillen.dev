@@ -19,7 +19,7 @@
     "@nuxt/devtools": "1.7.0",
     "@nuxthq/studio": "^2.2.1",
     "@types/node": "^22.10.5",
-    "@unocss/nuxt": "^0.65.3",
+    "@unocss/nuxt": "^65.0.0",
     "@vernaillen/nuxt-base-layer": "^0.3.13",
     "lightningcss": "^1.28.2",
     "nuxt": "^3.15.1",
