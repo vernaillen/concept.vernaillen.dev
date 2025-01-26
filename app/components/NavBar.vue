@@ -1,9 +1,7 @@
 <script setup lang="ts">
-const { data: navigation } = await useAsyncData('navigation', () =>
-  queryContent('/')
-    .sort({ _file: 1 })
-    .find()
-)
+const { data: navigation } = await useAsyncData('nav', () => {
+  return queryCollectionNavigation('content')
+})
 
 function linkClass (path: string) {
   const currentRoute = useRoute().path
@@ -20,7 +18,7 @@ function linkClass (path: string) {
   <ul class="flex justify-center my-0">
     <li v-for="(item, index) in navigation" :key="index" class="relative list-none group justify-center my-0">
       <NuxtLink
-        :to="item._path"
+        :to="item.path"
         :aria-label="'go to ' + item.title"
         class="menu-scroll text-base text-dark dark:text-white group-hover:opacity-70
         text-center items-center justify-center no-underline
